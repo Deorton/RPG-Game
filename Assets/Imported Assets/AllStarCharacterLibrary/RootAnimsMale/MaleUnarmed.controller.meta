@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 10f2a944946c4fe458a9d357a54018bc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43181
+  packageName: All Star Character Collection
+  packageVersion: 5.2
+  assetPath: Assets/AllStarCharacterLibrary/RootAnimsMale/MaleUnarmed.controller
+  uploadId: 301412

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 47ce62578866b994eb02c5d8008d2b9b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43181
+  packageName: All Star Character Collection
+  packageVersion: 5.2
+  assetPath: Assets/AllStarCharacterLibrary/RootAnimsFemale/FemaleOneAnimTest.controller
+  uploadId: 301412

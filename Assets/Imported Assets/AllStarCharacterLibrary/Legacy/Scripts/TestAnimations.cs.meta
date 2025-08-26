@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 402c5856403139b45b63fdd950a21ab0
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43181
+  packageName: All Star Character Collection
+  packageVersion: 5.2
+  assetPath: Assets/AllStarCharacterLibrary/Legacy/Scripts/TestAnimations.cs
+  uploadId: 301412

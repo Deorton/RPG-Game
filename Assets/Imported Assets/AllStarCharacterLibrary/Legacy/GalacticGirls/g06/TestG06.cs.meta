@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ce0fa6679d1aeb84584e2823a97756aa
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43181
+  packageName: All Star Character Collection
+  packageVersion: 5.2
+  assetPath: Assets/AllStarCharacterLibrary/Legacy/GalacticGirls/g06/TestG06.cs
+  uploadId: 301412

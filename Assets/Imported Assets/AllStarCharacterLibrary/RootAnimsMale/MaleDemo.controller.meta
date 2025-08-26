@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da3e82f0522b01943988c703e42aa70a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43181
+  packageName: All Star Character Collection
+  packageVersion: 5.2
+  assetPath: Assets/AllStarCharacterLibrary/RootAnimsMale/MaleDemo.controller
+  uploadId: 301412

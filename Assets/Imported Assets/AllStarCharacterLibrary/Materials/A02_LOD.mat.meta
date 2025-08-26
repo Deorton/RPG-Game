@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4086bd2737e263f4b819feb585c9c5cf
+timeCreated: 1450295352
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 43181
+  packageName: All Star Character Collection
+  packageVersion: 5.2
+  assetPath: Assets/AllStarCharacterLibrary/Materials/A02_LOD.mat
+  uploadId: 301412
