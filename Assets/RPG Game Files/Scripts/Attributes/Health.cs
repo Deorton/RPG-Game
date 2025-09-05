@@ -6,6 +6,8 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour
     {
+        [SerializeField] float healthPoints = 100f;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -16,6 +18,11 @@ namespace RPG.Attributes
         void Update()
         {
 
+        }
+
+        public void TakeDamage(float damage)
+        {
+            healthPoints = Mathf.Max(healthPoints - damage, 0);
         }
     }
 }

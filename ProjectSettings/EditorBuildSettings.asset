@@ -4,5 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/RPG Game Files/Scenes/Main Menu.unity
+    guid: a89538c26b6dd0f48936ca57128377ad
+  - enabled: 1
+    path: Assets/RPG Game Files/Scenes/Class Selection.unity
+    guid: c144f67ad1dfaa94092614cb6e723244
+  - enabled: 1
+    path: Assets/RPG Game Files/Scenes/Character Creation.unity
+    guid: 5074300121c928349aa4c4fa57b62b36
+  - enabled: 1
+    path: Assets/RPG Game Files/Scenes/Main Game World.unity
+    guid: 26241aa805d0d9e4785c0b22f789c582
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
