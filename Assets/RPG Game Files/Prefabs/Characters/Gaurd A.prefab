@@ -2121,6 +2121,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2012489892498175977, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: m_Acceleration
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012489892498175977, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 2220383506151624583, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       propertyPath: m_Name
       value: Gaurd A
@@ -2179,8 +2187,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4580505556871524746, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7506175824258422229}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2220383506151624583, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6789466108748732809}
   m_SourcePrefab: {fileID: 100100000, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+--- !u!1 &1320231500562619259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2220383506151624583, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+  m_PrefabInstance: {fileID: 901287852910646524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6789466108748732809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320231500562619259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9921fd529928a1f4f8986208a6983e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseRange: 5
+  suspicionTime: 3
 --- !u!4 &3680352459288126838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4580505556871524746, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}

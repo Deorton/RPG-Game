@@ -2,17 +2,20 @@ using System;
 using RPG.Attributes;
 using RPG.Combat;
 using RPG.Movement;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] MovementControl movementControl;
+        MovementControl movementControl;
+        Health health;
 
         void Awake()
         {
             movementControl = GetComponent<MovementControl>();
+            health = GetComponent<Health>();
         }
 
         void Start()
@@ -23,8 +26,11 @@ namespace RPG.Control
         // Update is called once per frame
         void Update()
         {
+            if (health.IsDead()) return;
+
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
+            
             print("Nothing to do");
         }
 
@@ -37,9 +43,11 @@ namespace RPG.Control
                 Health target = hit.transform.GetComponent<Health>();
                 if (target == null) continue;
 
+                if (!GetComponent<CombatControl>().CanAttack(target.gameObject)) continue;
+
                 if (Input.GetMouseButton(0))
                 {
-                    GetComponent<CombatControl>().Attack(target);
+                    GetComponent<CombatControl>().Attack(target.gameObject);
                 }
 
                 return true;

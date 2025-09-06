@@ -1,3 +1,4 @@
+using RPG.Attributes;
 using RPG.Core;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,15 +8,18 @@ namespace RPG.Movement
     public class MovementControl : MonoBehaviour, IAction
     {
         NavMeshAgent navMeshAgent;
+        Health health;
 
         void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            health = GetComponent<Health>();
         }
 
         // Update is called once per frame
         void Update()
         {
+            navMeshAgent.enabled = !health.IsDead();
             UpdateAnimator();
         }
 
