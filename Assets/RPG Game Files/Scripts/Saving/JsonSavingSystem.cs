@@ -10,6 +10,13 @@ namespace RPG.Saving
 {
     public class JsonSavingSystem : MonoBehaviour
     {
+
+        //    In your project's root (on the disk, not within the editor), navigate to the Packages folder. 
+        //    You'll find a file called manifest.json. Be very careful when editing this file. #
+        //    All we are going to do is add one line to the top of the dependencies section:
+    
+        //    "com.unity.nuget.newtonsoft-json": "2.0.0",
+
         private const string extension = ".json";
         
         /// <summary>
