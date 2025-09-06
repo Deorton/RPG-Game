@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RPG Game Files/Scenes/Main Game World.unity
     guid: 26241aa805d0d9e4785c0b22f789c582
+  - enabled: 1
+    path: Assets/RPG Game Files/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/RPG Game Files/Scenes/SampleScene2.unity
+    guid: 3c29598dd48f7344ba3aea7873321ad3
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
