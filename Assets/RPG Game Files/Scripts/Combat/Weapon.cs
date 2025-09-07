@@ -1,3 +1,4 @@
+using RPG.Attributes;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -7,11 +8,42 @@ namespace RPG.Combat
     {
         [SerializeField] AnimatorOverrideController weaponOverride = null;
         [SerializeField] GameObject equippedPrefab = null;
-         [SerializeField] float attackRange = 2f;
+        [SerializeField] float attackRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float damage = 10f;
         [SerializeField] bool isRightHanded = true;
+        [SerializeField] Projectile projectile = null;
 
+        public void Spawn(Transform rightHand, Transform leftHand, Animator animator)
+        {
+            if (equippedPrefab != null)
+            {
+                Transform handTransform = GetHandTransform(rightHand, leftHand);
+                Instantiate(equippedPrefab, handTransform);
+            }
+
+            if (weaponOverride != null)
+            {
+                animator.runtimeAnimatorController = weaponOverride;
+            }
+        }
+
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target)
+        {
+            Projectile projInstance = Instantiate(projectile, GetHandTransform(rightHand, leftHand).position, Quaternion.identity);
+            projInstance.SetTarget(target);
+        }
+
+        private Transform GetHandTransform(Transform rightHand, Transform leftHand)
+        {
+            return isRightHanded ? rightHand : leftHand;
+        }
+
+        public bool HasProjectile()
+        {
+            return projectile != null;
+        }
+        
         public float GetRange()
         {
             return attackRange;
@@ -25,20 +57,6 @@ namespace RPG.Combat
         public float GetTimeBetweenAttacks()
         {
             return timeBetweenAttacks;
-        }
-
-        public void Spawn(Transform rightHand, Transform leftHand, Animator animator)
-        {
-            if (equippedPrefab != null)
-            {
-                Transform handTransform = isRightHanded ? rightHand : leftHand;
-                Instantiate(equippedPrefab, handTransform);
-            }
-
-            if (weaponOverride != null)
-            {
-                animator.runtimeAnimatorController = weaponOverride;
-            }
         }
     }
 }

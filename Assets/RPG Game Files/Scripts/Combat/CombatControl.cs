@@ -52,6 +52,12 @@ namespace RPG.Combat
             }
         }
 
+        public void EquipWeapon(Weapon weapon)
+        {
+            weapon.Spawn(RightHandTransform, LeftHandTransform, animator);
+            currentWeapon = weapon;
+        }
+
         private void AttackBehaviour()
         {
             transform.LookAt(currentTarget.transform);
@@ -113,10 +119,14 @@ namespace RPG.Combat
             currentTarget.TakeDamage(currentWeapon.GetDamage());
         }
 
-        public void EquipWeapon(Weapon weapon)
+        void Shoot()
         {
-            weapon.Spawn(RightHandTransform, LeftHandTransform, animator);
-            currentWeapon = weapon;
+            if (currentTarget == null) return;
+            
+            if (currentWeapon.HasProjectile())
+            {
+                currentWeapon.LaunchProjectile(RightHandTransform, LeftHandTransform, currentTarget);
+            }
         }
     }
 }

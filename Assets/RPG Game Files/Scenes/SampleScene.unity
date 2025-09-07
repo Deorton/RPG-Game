@@ -2934,6 +2934,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 384853695}
+  - {fileID: 1843452238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1127430712
@@ -3008,7 +3009,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1122831444}
     m_Modifications:
     - target: {fileID: 2211291391924708055, guid: a62284059a848db4a94a1390bc506319, type: 3}
       propertyPath: m_Name
@@ -3032,15 +3033,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8355288063361292301, guid: a62284059a848db4a94a1390bc506319, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8355288063361292301, guid: a62284059a848db4a94a1390bc506319, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8355288063361292301, guid: a62284059a848db4a94a1390bc506319, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8355288063361292301, guid: a62284059a848db4a94a1390bc506319, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4800,6 +4801,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823333916}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1843452238 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8355288063361292301, guid: a62284059a848db4a94a1390bc506319, type: 3}
+  m_PrefabInstance: {fileID: 1175989649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1843562850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5888,7 +5894,7 @@ PrefabInstance:
     - target: {fileID: 4609240520674856335, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
       propertyPath: deafaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: dac90a308a534bf4e8774e61082e0089, type: 2}
+      objectReference: {fileID: 11400000, guid: 92da72102bed951439efd306a0e465b9, type: 2}
     - target: {fileID: 5463261381559610690, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6080,4 +6086,3 @@ SceneRoots:
   - {fileID: 1316933487}
   - {fileID: 5092461767445392372}
   - {fileID: 1122831444}
-  - {fileID: 1175989649}
