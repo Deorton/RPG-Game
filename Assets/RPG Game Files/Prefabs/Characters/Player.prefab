@@ -2677,6 +2677,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3111543222383358133, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: uniqueIdentifier
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3758935334370634182, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -2761,7 +2765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e84894eb8764a82a8e40b81cfddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementControl: {fileID: 0}
 --- !u!114 &1487460844653915499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2774,6 +2777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e97d3a9568aa684e9315778a71b2a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 6
 --- !u!4 &4260399880156181166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4580505556871524746, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}

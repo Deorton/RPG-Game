@@ -1,11 +1,13 @@
+using Newtonsoft.Json.Linq;
 using RPG.Attributes;
 using RPG.Core;
+using RPG.Saving;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace RPG.Movement
 {
-    public class MovementControl : MonoBehaviour, IAction
+    public class MovementControl : MonoBehaviour, IAction, IJsonSaveable
     {
         [SerializeField] float maxSpeed = 6f;
         NavMeshAgent navMeshAgent;
@@ -55,5 +57,20 @@ namespace RPG.Movement
         {
             Stop();
         }
+
+        public JToken CaptureAsJToken()
+        {
+            return transform.position.ToToken();
+        }
+
+        public void RestoreFromJToken(JToken state)
+        {
+            navMeshAgent.enabled = false;
+            transform.position = state.ToVector3();
+            navMeshAgent.enabled = true;
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+        }
+
+
     }
 }
