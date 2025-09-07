@@ -1,3 +1,4 @@
+using System;
 using RPG.Attributes;
 using RPG.Core;
 using RPG.Movement;
@@ -7,23 +8,28 @@ namespace RPG.Combat
 {
     public class CombatControl : MonoBehaviour, IAction
     {
-        [SerializeField] float attackRange = 2f;
-        [SerializeField] float timeBetweenAttacks = 1f;
-        [SerializeField] float damage = 10f;
-        float timeSinceLastAttack = Mathf.Infinity;
+        [SerializeField] Transform RightHandTransform = null;
+        [SerializeField] Transform LeftHandTransform = null;
+        [SerializeField] Weapon deafaultWeapon = null;
+        
 
-        public Health currentTarget;
+        float timeSinceLastAttack = Mathf.Infinity;
+        Weapon currentWeapon = null;
+
+        Health currentTarget;
         MovementControl movementControl;
+        Animator animator;
 
         void Awake()
         {
             movementControl = GetComponent<MovementControl>();
+            animator = GetComponent<Animator>();
         }
 
         // Start is called before the first frame update
         void Start()
         {
-
+            EquipWeapon(deafaultWeapon);
         }
 
         // Update is called once per frame
@@ -50,7 +56,7 @@ namespace RPG.Combat
         {
             transform.LookAt(currentTarget.transform);
 
-            if (timeSinceLastAttack > timeBetweenAttacks)
+            if (timeSinceLastAttack > currentWeapon.GetTimeBetweenAttacks())
             {
                 TriggerAttack();
                 timeSinceLastAttack = 0f;
@@ -66,7 +72,7 @@ namespace RPG.Combat
 
         private bool GetIsInRange()
         {
-            return Vector3.Distance(transform.position, currentTarget.transform.position) < attackRange;
+            return Vector3.Distance(transform.position, currentTarget.transform.position) < currentWeapon.GetRange();
         }
 
         public bool CanAttack(GameObject target)
@@ -104,7 +110,13 @@ namespace RPG.Combat
         void Hit()
         {
             if (currentTarget == null) return;
-            currentTarget.TakeDamage(damage);
+            currentTarget.TakeDamage(currentWeapon.GetDamage());
+        }
+
+        public void EquipWeapon(Weapon weapon)
+        {
+            weapon.Spawn(RightHandTransform, LeftHandTransform, animator);
+            currentWeapon = weapon;
         }
     }
 }

@@ -2133,6 +2133,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gaurd A
       objectReference: {fileID: 0}
+    - target: {fileID: 2621421978453265390, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: dac90a308a534bf4e8774e61082e0089, type: 2}
+    - target: {fileID: 2621421978453265390, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: LeftHandTransform
+      value: 
+      objectReference: {fileID: 7506175824258422147}
+    - target: {fileID: 2621421978453265390, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: RightHandTransform
+      value: 
+      objectReference: {fileID: 7506175824258421835}
     - target: {fileID: 3758935334370634182, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -2211,6 +2223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseRange: 5
   suspicionTime: 3
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 3
+  patrolSpeedFraction: 0.2
 --- !u!4 &3680352459288126838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4580505556871524746, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
