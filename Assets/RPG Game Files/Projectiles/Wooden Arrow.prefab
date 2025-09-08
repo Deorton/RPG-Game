@@ -70,9 +70,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5426042497740966496, guid: c8e3bd7fb4282e141a52c2e8c99b96e0, type: 3}
+      propertyPath: projectileDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2852597294611449125, guid: c8e3bd7fb4282e141a52c2e8c99b96e0, type: 3}
       propertyPath: m_Name
       value: Wooden Arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435414864288881188, guid: c8e3bd7fb4282e141a52c2e8c99b96e0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435414864288881188, guid: c8e3bd7fb4282e141a52c2e8c99b96e0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435414864288881188, guid: c8e3bd7fb4282e141a52c2e8c99b96e0, type: 3}
+      propertyPath: m_Size.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435414864288881188, guid: c8e3bd7fb4282e141a52c2e8c99b96e0, type: 3}
+      propertyPath: m_Center.z
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 6606547159981329609, guid: c8e3bd7fb4282e141a52c2e8c99b96e0, type: 3}
       propertyPath: m_LocalPosition.x
