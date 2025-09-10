@@ -112,6 +112,11 @@ namespace RPG.Combat
             CancelAttack();
         }
 
+        public Health GetTarget()
+        {
+            return currentTarget;
+        }
+
         // Animation Event
         void Hit()
         {

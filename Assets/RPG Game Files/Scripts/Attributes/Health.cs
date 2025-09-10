@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Linq;
 using RPG.Core;
 using RPG.Saving;
+using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Attributes
@@ -9,6 +10,11 @@ namespace RPG.Attributes
     {
         [SerializeField] float healthPoints = 100f;
         bool isDead = false;
+
+        void Start()
+        {
+            healthPoints = GetComponent<BaseStat>().getHealth();
+        }
 
         public bool IsDead()
         {
@@ -23,6 +29,11 @@ namespace RPG.Attributes
             {
                 Die();
             }
+        }
+
+        public float GetHealthPercentage()
+        {
+            return 100 * (healthPoints / GetComponent<BaseStat>().getHealth());
         }
 
         private void Die()

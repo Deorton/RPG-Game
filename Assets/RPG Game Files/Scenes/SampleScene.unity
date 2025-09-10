@@ -5958,6 +5958,10 @@ PrefabInstance:
       propertyPath: deafaultWeapon
       value: 
       objectReference: {fileID: 11400000, guid: 202eb45692ae726428c8139d6beb771e, type: 2}
+    - target: {fileID: 4899056197338934536, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
+      propertyPath: startingLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5463261381559610690, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
