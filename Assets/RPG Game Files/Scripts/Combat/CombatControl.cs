@@ -1,12 +1,14 @@
 using System;
+using Newtonsoft.Json.Linq;
 using RPG.Attributes;
 using RPG.Core;
 using RPG.Movement;
+using RPG.Saving;
 using UnityEngine;
 
 namespace RPG.Combat
 {
-    public class CombatControl : MonoBehaviour, IAction
+    public class CombatControl : MonoBehaviour, IAction//, IJsonSaveable
     {
         [SerializeField] Transform RightHandTransform = null;
         [SerializeField] Transform LeftHandTransform = null;
@@ -121,7 +123,7 @@ namespace RPG.Combat
         void Hit()
         {
             if (currentTarget == null) return;
-            currentTarget.TakeDamage(currentWeapon.GetDamage());
+            currentTarget.TakeDamage(gameObject, currentWeapon.GetDamage());
         }
 
         void Shoot()
@@ -130,9 +132,22 @@ namespace RPG.Combat
             
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(RightHandTransform, LeftHandTransform, currentTarget);
+                currentWeapon.LaunchProjectile(RightHandTransform, LeftHandTransform, currentTarget, gameObject);
             }
         }
+
+        // public JToken CaptureAsJToken()
+        // {
+        //     return JToken.FromObject(currentWeaponConfig.name);
+        // }
+
+        // public void RestoreFromJToken(JToken state)
+        // {
+        //     string weaponName = state.ToObject<string>();
+        //     WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
+        //     EquipWeapon(weapon);
+        // }
+
     }
 }
 

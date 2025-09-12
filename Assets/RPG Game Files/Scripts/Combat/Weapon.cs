@@ -55,10 +55,10 @@ namespace RPG.Combat
             Destroy(oldWeapon.gameObject);
         }
 
-        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target)
+        public void LaunchProjectile(Transform rightHand, Transform leftHand, Health target, GameObject instigator)
         {
             Projectile projInstance = Instantiate(projectile, GetHandTransform(rightHand, leftHand).position, Quaternion.identity);
-            projInstance.SetTarget(target, damage);
+            projInstance.SetTarget(target, instigator, damage);
         }
 
         private Transform GetHandTransform(Transform rightHand, Transform leftHand)

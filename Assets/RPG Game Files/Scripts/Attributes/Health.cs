@@ -1,3 +1,4 @@
+using System;
 using Newtonsoft.Json.Linq;
 using RPG.Core;
 using RPG.Saving;
@@ -9,11 +10,18 @@ namespace RPG.Attributes
     public class Health : MonoBehaviour, IJsonSaveable
     {
         [SerializeField] float healthPoints = 100f;
+
+        BaseStats baseStats;
         bool isDead = false;
+
+        void Awake()
+        {
+            baseStats = GetComponent<BaseStats>();
+        }
 
         void Start()
         {
-            healthPoints = GetComponent<BaseStat>().getHealth();
+            healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         public bool IsDead()
@@ -21,19 +29,20 @@ namespace RPG.Attributes
             return isDead;
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(GameObject instigator, float damage)
         {
             healthPoints = Mathf.Max(healthPoints - damage, 0);
 
             if (healthPoints == 0)
             {
                 Die();
+                AwardExperience(instigator);
             }
         }
 
         public float GetHealthPercentage()
         {
-            return 100 * (healthPoints / GetComponent<BaseStat>().getHealth());
+            return 100 * (healthPoints / baseStats.GetStat(Stat.Health));
         }
 
         private void Die()
@@ -44,6 +53,16 @@ namespace RPG.Attributes
                 isDead = true;
                 GetComponent<ActionScheduler>().CancelCurrentAction();
             }
+        }
+
+        private void AwardExperience(GameObject instigator)
+        {
+            Experience experience = instigator.GetComponent<Experience>();
+
+            if (experience == null) return;
+
+            experience.GainExperience(baseStats.GetStat(Stat.experienceReward));
+            
         }
 
         public JToken CaptureAsJToken()

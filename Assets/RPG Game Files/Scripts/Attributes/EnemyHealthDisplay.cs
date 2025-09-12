@@ -19,6 +19,7 @@ namespace RPG.Attributes
             if (combatControl.GetTarget() == null)
             {
                 GetComponent<TextMeshProUGUI>().text = "N/A";
+                return;
             }
 
             Health health = combatControl.GetTarget().GetComponent<Health>();
