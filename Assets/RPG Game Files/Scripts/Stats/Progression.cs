@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using UnityEngine.UIElements;
 
 namespace RPG.Stats
 {
@@ -42,6 +43,14 @@ namespace RPG.Stats
 
                 lookupTable[progressionClass.characterClass] = statLookupTable;
             }
+        }
+
+        public int GetLevels(Stat stat, CharacterClass characterClass)
+        {
+            BuildLookup();
+            
+            float[] levels = lookupTable[characterClass][stat];
+            return levels.Length;
         }
 
         [System.Serializable]

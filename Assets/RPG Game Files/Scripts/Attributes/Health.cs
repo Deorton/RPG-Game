@@ -9,7 +9,7 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, IJsonSaveable
     {
-        [SerializeField] float healthPoints = 100f;
+        float healthPoints = -1f;
 
         BaseStats baseStats;
         bool isDead = false;
@@ -21,7 +21,10 @@ namespace RPG.Attributes
 
         void Start()
         {
-            healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+            if (healthPoints < 0)
+            {
+                healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+            }
         }
 
         public bool IsDead()

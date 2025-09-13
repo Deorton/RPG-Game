@@ -12,5 +12,6 @@ namespace RPG.Stats
         Wisdom,
         Charisma,
         experienceReward,
+        experienceToLevelUp,
     }
 }
