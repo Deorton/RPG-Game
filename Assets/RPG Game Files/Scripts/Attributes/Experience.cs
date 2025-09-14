@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
@@ -11,12 +10,9 @@ namespace RPG.Attributes
     {
         [SerializeField] float experiencePoints = 0;
 
-        public event Action onExperienceGained;
-
         public void GainExperience(float EXPGained)
         {
             experiencePoints += EXPGained;
-            onExperienceGained();
         }
 
         public float GetEXP()
