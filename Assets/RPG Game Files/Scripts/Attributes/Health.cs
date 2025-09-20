@@ -9,6 +9,8 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, IJsonSaveable
     {
+        [Range(0, 100)]
+        [SerializeField] float healthLevelUpPercentage = 70f;
         float healthPoints = -1f;
 
         BaseStats baseStats;
@@ -21,10 +23,17 @@ namespace RPG.Attributes
 
         void Start()
         {
+            baseStats.onLevelUp += UpdateHealthOnLevelUp;
             if (healthPoints < 0)
             {
                 healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             }
+        }
+
+        private void UpdateHealthOnLevelUp()
+        {
+            float LevelledUpHealthPoints = baseStats.GetStat(Stat.Health) * (healthLevelUpPercentage / 100);
+            healthPoints = Mathf.Max(healthPoints, LevelledUpHealthPoints);
         }
 
         public bool IsDead()

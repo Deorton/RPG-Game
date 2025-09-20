@@ -1,12 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class csDestroyEffect : MonoBehaviour {
-	
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.C))
+namespace RPG.Core
+{
+    public class csDestroyEffect : MonoBehaviour
+    {
+        [SerializeField] GameObject targetToDestroy = null;
+
+        void Update()
         {
-            Destroy(gameObject);
+            if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.C))
+            {
+                if (targetToDestroy != null)
+                {
+                    Destroy(targetToDestroy);
+                }
+                
+                Destroy(gameObject);
+            }
         }
     }
 }
