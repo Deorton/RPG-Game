@@ -13,5 +13,6 @@ namespace RPG.Stats
         Charisma,
         experienceReward,
         experienceToLevelUp,
+        damage,
     }
 }

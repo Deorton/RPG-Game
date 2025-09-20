@@ -4,6 +4,7 @@ using RPG.Attributes;
 using RPG.Core;
 using RPG.Movement;
 using RPG.Saving;
+using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -20,11 +21,13 @@ namespace RPG.Combat
 
         Health currentTarget;
         MovementControl movementControl;
+        BaseStats baseStats;
         Animator animator;
 
         void Awake()
         {
             movementControl = GetComponent<MovementControl>();
+            baseStats = GetComponent<BaseStats>();
             animator = GetComponent<Animator>();
         }
 
@@ -122,8 +125,10 @@ namespace RPG.Combat
         // Animation Event
         void Hit()
         {
+            float totalDamage = baseStats.GetStat(Stat.damage) + currentWeapon.GetDamage();
+            
             if (currentTarget == null) return;
-            currentTarget.TakeDamage(gameObject, currentWeapon.GetDamage());
+            currentTarget.TakeDamage(gameObject, totalDamage);
         }
 
         void Shoot()
@@ -132,7 +137,7 @@ namespace RPG.Combat
             
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(RightHandTransform, LeftHandTransform, currentTarget, gameObject);
+                currentWeapon.LaunchProjectile(RightHandTransform, LeftHandTransform, currentTarget, gameObject, baseStats.GetStat(Stat.damage));
             }
         }
 
