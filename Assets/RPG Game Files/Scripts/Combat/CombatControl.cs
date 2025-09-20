@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using RPG.Attributes;
 using RPG.Core;
@@ -9,7 +10,7 @@ using UnityEngine;
 
 namespace RPG.Combat
 {
-    public class CombatControl : MonoBehaviour, IAction//, IJsonSaveable
+    public class CombatControl : MonoBehaviour, IAction, IModifierProvider//,  IJsonSaveable
     {
         [SerializeField] Transform RightHandTransform = null;
         [SerializeField] Transform LeftHandTransform = null;
@@ -125,7 +126,7 @@ namespace RPG.Combat
         // Animation Event
         void Hit()
         {
-            float totalDamage = baseStats.GetStat(Stat.damage) + currentWeapon.GetDamage();
+            float totalDamage = baseStats.GetStat(Stat.damage);
             
             if (currentTarget == null) return;
             currentTarget.TakeDamage(gameObject, totalDamage);
@@ -141,18 +142,30 @@ namespace RPG.Combat
             }
         }
 
-        // public JToken CaptureAsJToken()
-        // {
-        //     return JToken.FromObject(currentWeaponConfig.name);
-        // }
+        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
+        {
+            if (stat == Stat.damage)
+            {
+                yield return currentWeapon.GetDamage();
+            }
+        }
 
-        // public void RestoreFromJToken(JToken state)
-        // {
-        //     string weaponName = state.ToObject<string>();
-        //     WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
-        //     EquipWeapon(weapon);
-        // }
+        public IEnumerable<float> GetPercentageModifiers(Stat stat)
+        {
+            throw new NotImplementedException();
+        }
 
+        //  public JToken CaptureAsJToken()
+        //  {
+        //      return JToken.FromObject(currentWeaponConfig.name);
+        //  }
+
+        //  public void RestoreFromJToken(JToken state)
+        //  {
+        //      string weaponName = state.ToObject<string>();
+        //      WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
+        //      EquipWeapon(weapon);
+        //  }
     }
 }
 
