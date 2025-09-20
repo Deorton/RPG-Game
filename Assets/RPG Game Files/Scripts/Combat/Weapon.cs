@@ -12,6 +12,8 @@ namespace RPG.Combat
         [SerializeField] float attackRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float damage = 10f;
+        [Range(0, 100)]
+        [SerializeField] float percentageBonus = 0f;
         [SerializeField] bool isRightHanded = true;
         [SerializeField] Projectile projectile = null;
 
@@ -72,7 +74,7 @@ namespace RPG.Combat
         {
             return projectile != null;
         }
-        
+
         public float GetRange()
         {
             return attackRange;
@@ -86,6 +88,11 @@ namespace RPG.Combat
         public float GetTimeBetweenAttacks()
         {
             return timeBetweenAttacks;
+        }
+        
+        public float GetPercentageBonus()
+        {
+            return percentageBonus;
         }
     }
 }

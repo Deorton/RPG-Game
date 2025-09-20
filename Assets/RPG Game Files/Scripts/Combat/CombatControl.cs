@@ -152,7 +152,10 @@ namespace RPG.Combat
 
         public IEnumerable<float> GetPercentageModifiers(Stat stat)
         {
-            throw new NotImplementedException();
+            if (stat == Stat.damage)
+            {
+                yield return currentWeapon.GetPercentageBonus();
+            }
         }
 
         //  public JToken CaptureAsJToken()

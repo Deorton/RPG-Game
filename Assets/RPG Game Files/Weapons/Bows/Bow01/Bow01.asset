@@ -17,5 +17,6 @@ MonoBehaviour:
   attackRange: 10
   timeBetweenAttacks: 2
   damage: 20
+  percentageBonus: 3
   isRightHanded: 0
   projectile: {fileID: 8504266086487523083, guid: 4b76662893c88b34eaa3e5ac1f101f0e, type: 3}
