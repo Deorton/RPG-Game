@@ -24,8 +24,8 @@ namespace RPG.Control
         MovementControl movementControl;
         Health health;
 
-        Vector3 startingPosition;
-        Vector3 startingRotation;
+        LazyValue<Vector3> startingPosition;
+        LazyValue<Vector3> startingRotation;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
         int currentWaypointIndex = 0;
@@ -36,12 +36,25 @@ namespace RPG.Control
             combatControl = GetComponent<CombatControl>();
             movementControl = GetComponent<MovementControl>();
             health = GetComponent<Health>();
+
+            startingPosition = new LazyValue<Vector3>(GetStartingPosition);
+            startingRotation = new LazyValue<Vector3>(GetStartingRotation);
+        }
+
+        private Vector3 GetStartingRotation()
+        {
+            return transform.eulerAngles;
+        }
+
+        private Vector3 GetStartingPosition()
+        {
+            return transform.position;
         }
 
         void Start()
         {
-            startingPosition = transform.position;
-            startingRotation = transform.eulerAngles;
+            startingPosition.ForceInit();
+            startingRotation.ForceInit();
         }
 
         void Update()
@@ -110,14 +123,14 @@ namespace RPG.Control
 
         private void GuardBehaviour()
         {
-            movementControl.StartMoveAction(startingPosition, patrolSpeedFraction);
+            movementControl.StartMoveAction(startingPosition.value, patrolSpeedFraction);
             
-            if (Vector3.Distance(transform.position, startingPosition) < 0.1f)
+            if (Vector3.Distance(transform.position, startingPosition.value) < 0.1f)
             {
-                if (Vector3.Distance(transform.eulerAngles, startingRotation) > 0.1f)
+                if (Vector3.Distance(transform.eulerAngles, startingRotation.value) > 0.1f)
                 {
                     //rotate back to starting rotation
-                    transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, startingRotation, Time.deltaTime * 10f);
+                    transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, startingRotation.value, Time.deltaTime * 10f);
                 }
             }
             
