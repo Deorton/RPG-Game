@@ -12,6 +12,23 @@ namespace RPG.Control
         MovementControl movementControl;
         Health health;
 
+        enum CursorType
+        {
+            None,
+            Movement,
+            Combat,
+        }
+
+        [System.Serializable]
+        struct CursorMapping
+        {
+            public CursorType type;
+            public Texture2D texture;
+            public Vector2 hotspot;
+        }
+
+        [SerializeField] CursorMapping[] cursorMappings = null;
+
         void Awake()
         {
             movementControl = GetComponent<MovementControl>();
@@ -20,7 +37,7 @@ namespace RPG.Control
 
         void Start()
         {
-            
+
         }
 
         // Update is called once per frame
@@ -30,8 +47,8 @@ namespace RPG.Control
 
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
-            
-            print("Nothing to do");
+
+            SetCursor(CursorType.None);
         }
 
         private bool InteractWithCombat()
@@ -49,7 +66,7 @@ namespace RPG.Control
                 {
                     GetComponent<CombatControl>().Attack(target.gameObject);
                 }
-
+                SetCursor(CursorType.Combat);
                 return true;
             }
 
@@ -66,6 +83,7 @@ namespace RPG.Control
                 {
                     GetComponent<MovementControl>().StartMoveAction(hit.point, 1f);
                 }
+                SetCursor(CursorType.Movement);
                 return true;
             }
             return false;
@@ -74,6 +92,24 @@ namespace RPG.Control
         private static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
+
+        private void SetCursor(CursorType combat)
+        {
+            CursorMapping mapping = GetCursorMapping(combat);
+            Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
+        }
+        
+        private CursorMapping GetCursorMapping(CursorType type)
+        {
+            foreach (CursorMapping mapping in cursorMappings)
+            {
+                if (mapping.type == type)
+                {
+                    return mapping;
+                }
+            }
+            return cursorMappings[0];
         }
     }
 }

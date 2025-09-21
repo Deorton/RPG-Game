@@ -2792,6 +2792,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a6e84894eb8764a82a8e40b81cfddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorMappings:
+  - type: 0
+    texture: {fileID: 2800000, guid: 0358ffc168e43e94ab50173d9b54aa68, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 1
+    texture: {fileID: 2800000, guid: ed54b5c9c19df15428c734b046965d85, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 2
+    texture: {fileID: 2800000, guid: 1d0c857e06eebde4ba1bffde59ba3a34, type: 3}
+    hotspot: {x: 0, y: 0}
 --- !u!114 &1487460844653915499
 MonoBehaviour:
   m_ObjectHideFlags: 0
