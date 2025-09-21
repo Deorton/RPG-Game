@@ -149,6 +149,8 @@ GameObject:
   - component: {fileID: 6298986920281315396}
   - component: {fileID: 5622822967328286577}
   - component: {fileID: 6095353171265828961}
+  - component: {fileID: 658968178921272996}
+  - component: {fileID: 1795639585334380721}
   m_Layer: 5
   m_Name: Damage Text
   m_TagString: Untagged
@@ -173,7 +175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.2}
+  m_AnchoredPosition: {x: 0, y: 2.2000122}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3750469834412171920
@@ -221,7 +223,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1000
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5622822967328286577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,3 +253,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee995abbcb3998a4ba5e57f5899576d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &658968178921272996
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717105785862359377}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 7cb34b63a9d56a348bb5df655a234690, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7cb34b63a9d56a348bb5df655a234690, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!225 &1795639585334380721
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717105785862359377}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
