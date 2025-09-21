@@ -13,14 +13,6 @@ namespace RPG.Control
         MovementControl movementControl;
         Health health;
 
-        enum CursorType
-        {
-            None,
-            Movement,
-            Combat,
-            UI
-        }
-
         [System.Serializable]
         struct CursorMapping
         {
@@ -52,8 +44,8 @@ namespace RPG.Control
                 SetCursor(CursorType.UI);
                 return;
             }
-
-            if (InteractWithCombat()) return;
+            if (InteractWithComponent()) return;
+        
             if (InteractWithMovement()) return;
 
             SetCursor(CursorType.None);
@@ -70,26 +62,35 @@ namespace RPG.Control
             return false;
         }
 
-        private bool InteractWithCombat()
+        private bool InteractWithComponent()
         {
-            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            RaycastHit[] hits = RaycastAllSorted();
 
             foreach (RaycastHit hit in hits)
             {
-                Health target = hit.transform.GetComponent<Health>();
-                if (target == null) continue;
-
-                if (!GetComponent<CombatControl>().CanAttack(target.gameObject)) continue;
-
-                if (Input.GetMouseButton(0))
+                IRaycastable[] raycastables = hit.transform.GetComponents<IRaycastable>();
+                foreach (IRaycastable raycastable in raycastables)
                 {
-                    GetComponent<CombatControl>().Attack(target.gameObject);
+                    if (raycastable.HandleRaycast(this))
+                    {
+                        SetCursor(raycastable.GetCursorType());
+                        return true;
+                    }
                 }
-                SetCursor(CursorType.Combat);
-                return true;
             }
-
             return false;
+        }
+
+        private RaycastHit[] RaycastAllSorted()
+        {
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            float[] distances = new float[hits.Length];
+            for (int i = 0; i < hits.Length; i++)
+            {
+                distances[i] = hits[i].distance;
+            }
+            Array.Sort(distances, hits);
+            return hits;
         }
 
         private bool InteractWithMovement()

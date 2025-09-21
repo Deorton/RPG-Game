@@ -2207,6 +2207,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2220383506151624583, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6789466108748732809}
+    - targetCorrespondingSourceObject: {fileID: 2220383506151624583, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6482601536793411907}
   m_SourcePrefab: {fileID: 100100000, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
 --- !u!1 &1320231500562619259 stripped
 GameObject:
@@ -2231,6 +2234,18 @@ MonoBehaviour:
   waypointTolerance: 1
   waypointDwellTime: 3
   patrolSpeedFraction: 0.2
+--- !u!114 &6482601536793411907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320231500562619259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e40c9fde5d94c48aac913cacd8d4d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3680352459288126838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4580505556871524746, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
