@@ -4,6 +4,7 @@ using RPG.Core;
 using RPG.Saving;
 using RPG.Stats;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Attributes
 {
@@ -11,6 +12,7 @@ namespace RPG.Attributes
     {
         [Range(0, 100)]
         [SerializeField] float healthLevelUpPercentage = 70f;
+        [SerializeField] UnityEvent<float> takeDamage;
         LazyValue<float> healthPoints;
 
         BaseStats baseStats;
@@ -61,6 +63,11 @@ namespace RPG.Attributes
             {
                 Die();
                 AwardExperience(instigator);
+            }
+            else
+            {
+                takeDamage.Invoke(damage);
+                print(damage);
             }
         }
 
