@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseRange: 5
   suspicionTime: 3
+  aggroCooldownTime: 5
+  aggroRange: 10
   patrolPath: {fileID: 0}
   waypointTolerance: 1
   waypointDwellTime: 3

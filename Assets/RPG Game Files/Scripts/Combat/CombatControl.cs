@@ -55,7 +55,7 @@ namespace RPG.Combat
 
             if (currentTarget.IsDead()) return;
 
-            if (!GetIsInRange())
+            if (!GetIsInRange(currentTarget.transform))
             {
                 movementControl.MoveTo(currentTarget.transform.position, 1f);
             }
@@ -96,15 +96,15 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("Attack");
         }
 
-        private bool GetIsInRange()
+        private bool GetIsInRange(Transform target)
         {
-            return Vector3.Distance(transform.position, currentTarget.transform.position) < currentWeaponConfig.GetRange();
+            return Vector3.Distance(transform.position, target.transform.position) < currentWeaponConfig.GetRange();
         }
 
         public bool CanAttack(GameObject target)
         {
             if (target == null) return false;
-            if(!GetComponent<MovementControl>().CanMoveTo(target.transform.position)) return false;
+            if(!GetComponent<MovementControl>().CanMoveTo(target.transform.position) && !GetIsInRange(target.transform)) return false;
             if (target.GetComponent<Health>().IsDead()) return false;
 
             return true;
