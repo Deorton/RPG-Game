@@ -1248,6 +1248,10 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 1959277a-e999-4310-bbe2-f838cab6f8ff
       objectReference: {fileID: 0}
+    - target: {fileID: 3756183050383443869, guid: 73f952a8f15f15943b59a4a7dcea10e9, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: f35ff4273430cd1458e4af6a950e4ad5, type: 2}
     - target: {fileID: 4415788728282275509, guid: 73f952a8f15f15943b59a4a7dcea10e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.394747
@@ -1290,7 +1294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5619724122397641597, guid: 73f952a8f15f15943b59a4a7dcea10e9, type: 3}
       propertyPath: m_Name
-      value: Pickup Spawner
+      value: Hat Pickup Spawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3089,7 +3093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1122831444
 Transform:
   m_ObjectHideFlags: 0
@@ -6544,7 +6548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3855435378302435958, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -570.7499
+      value: -570.7497
       objectReference: {fileID: 0}
     - target: {fileID: 3856026852755149012, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
       propertyPath: m_AnchorMax.x

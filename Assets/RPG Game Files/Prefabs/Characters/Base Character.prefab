@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 6
+  maxNavPathLength: 40
 --- !u!114 &2621421978453265390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightHandTransform: {fileID: 0}
   LeftHandTransform: {fileID: 0}
-  deafaultWeapon: {fileID: 11400000, guid: dac90a308a534bf4e8774e61082e0089, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: dac90a308a534bf4e8774e61082e0089, type: 2}
 --- !u!114 &-1389542391670629729
 MonoBehaviour:
   m_ObjectHideFlags: 0
