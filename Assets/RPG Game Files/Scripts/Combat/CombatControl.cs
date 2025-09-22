@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace RPG.Combat
 {
-    public class CombatControl : MonoBehaviour, IAction, IModifierProvider,  IJsonSaveable
+    public class CombatControl : MonoBehaviour, IAction,  IJsonSaveable
     {
         [SerializeField] Transform RightHandTransform = null;
         [SerializeField] Transform LeftHandTransform = null;
@@ -183,33 +183,17 @@ namespace RPG.Combat
             }
         }
 
-        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
+        public JToken CaptureAsJToken()
         {
-            if (stat == Stat.damage)
-            {
-                yield return currentWeaponConfig.GetDamage();
-            }
+            return JToken.FromObject(currentWeaponConfig.name);
         }
 
-        public IEnumerable<float> GetPercentageModifiers(Stat stat)
+        public void RestoreFromJToken(JToken state)
         {
-            if (stat == Stat.damage)
-            {
-                yield return currentWeaponConfig.GetPercentageBonus();
-            }
+            string weaponName = state.ToObject<string>();
+            WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
+            EquipWeapon(weapon);
         }
-
-         public JToken CaptureAsJToken()
-         {
-             return JToken.FromObject(currentWeaponConfig.name);
-         }
-
-         public void RestoreFromJToken(JToken state)
-         {
-             string weaponName = state.ToObject<string>();
-             WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
-             EquipWeapon(weapon);
-         }
     }
 }
 
