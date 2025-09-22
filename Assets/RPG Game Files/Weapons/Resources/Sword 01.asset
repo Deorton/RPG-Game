@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sword 01
   m_EditorClassIdentifier: 
   weaponOverride: {fileID: 22100000, guid: 9af51baed3f648c4e83cef3cc77c08bc, type: 2}
-  equippedPrefab: {fileID: 7987190649913651423, guid: 648f7528ed5f61d428353d54ba8d1b75, type: 3}
+  equippedPrefab: {fileID: 8199678167682591683, guid: 648f7528ed5f61d428353d54ba8d1b75, type: 3}
   attackRange: 2
   timeBetweenAttacks: 1.5
   damage: 15

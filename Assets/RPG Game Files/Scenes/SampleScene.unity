@@ -6093,7 +6093,7 @@ PrefabInstance:
     - target: {fileID: 4609240520674856335, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
       propertyPath: deafaultWeapon
       value: 
-      objectReference: {fileID: 11400000, guid: 202eb45692ae726428c8139d6beb771e, type: 2}
+      objectReference: {fileID: 11400000, guid: dac90a308a534bf4e8774e61082e0089, type: 2}
     - target: {fileID: 4899056197338934536, guid: 318c4704cdbdef44b9b272a4ff400bf7, type: 3}
       propertyPath: startingLevel
       value: 1

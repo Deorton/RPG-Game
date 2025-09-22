@@ -16,6 +16,7 @@ namespace RPG.Attributes
         [SerializeField] UnityEvent onDie;
 
         LazyValue<float> healthPoints;
+        float healthpointSaveValue = 0f;
 
         BaseStats baseStats;
         bool isDead = false;
@@ -70,7 +71,7 @@ namespace RPG.Attributes
             else
             {
                 takeDamage.Invoke(damage);
-                print(damage);
+            //    print(damage);
             }
         }
 
@@ -116,12 +117,14 @@ namespace RPG.Attributes
 
         public JToken CaptureAsJToken()
         {
-            return JToken.FromObject(healthPoints);
+            healthpointSaveValue = healthPoints.value;
+            return JToken.FromObject(healthpointSaveValue);
         }
 
         public void RestoreFromJToken(JToken state)
         {
-            healthPoints.value = state.ToObject<float>();
+            healthpointSaveValue = state.ToObject<float>();
+            healthPoints.value = healthpointSaveValue;
             UpdateState();
         }
 

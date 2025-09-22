@@ -2690,6 +2690,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2621421978453265390, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: dac90a308a534bf4e8774e61082e0089, type: 2}
+    - target: {fileID: 2621421978453265390, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       propertyPath: weaponOverride
       value: 
       objectReference: {fileID: 22100000, guid: 9af51baed3f648c4e83cef3cc77c08bc, type: 2}
@@ -2808,6 +2812,8 @@ MonoBehaviour:
   - type: 4
     texture: {fileID: 2800000, guid: 16fe75169b730ac4ea465696ede0c861, type: 3}
     hotspot: {x: 0, y: 0}
+  maxNavMeshProjectionDistance: 1
+  maxNavPathLength: 40
 --- !u!114 &1487460844653915499
 MonoBehaviour:
   m_ObjectHideFlags: 0

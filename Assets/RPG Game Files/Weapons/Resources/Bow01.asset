@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bow01
   m_EditorClassIdentifier: 
   weaponOverride: {fileID: 22100000, guid: 96c41eca2c27ca748967baec945b5d05, type: 2}
-  equippedPrefab: {fileID: 2622790606384159103, guid: b7536af555900444b8e85b2564c97900, type: 3}
+  equippedPrefab: {fileID: -7073940126106004634, guid: b7536af555900444b8e85b2564c97900, type: 3}
   attackRange: 10
   timeBetweenAttacks: 2
   damage: 20
