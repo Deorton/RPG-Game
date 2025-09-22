@@ -13,6 +13,7 @@ namespace RPG.Control
     {
         [SerializeField] float chaseRange = 5f;
         [SerializeField] float suspicionTime = 3f;
+        [SerializeField] float aggroCooldownTime = 5f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 3f;
@@ -28,6 +29,7 @@ namespace RPG.Control
         LazyValue<Vector3> startingRotation;
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
+        float timeSinceAggrevated = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
         void Awake()
@@ -61,13 +63,12 @@ namespace RPG.Control
         {
             if (health.IsDead()) return;
 
-            if (InAttackRangeOfPlayer() && combatControl.CanAttack(player))
+            if (IsAggrevated() && combatControl.CanAttack(player))
             {
                 AttackBehaviour();
             }
             else if (timeSinceLastSawPlayer < suspicionTime)
             {
-                //suspicion state
                 SuspicionBehaviour();
             }
             else if (patrolPath != null)
@@ -80,6 +81,11 @@ namespace RPG.Control
             }
 
             UpdateTimers();
+        }
+
+        public void Aggrevate()
+        {
+            timeSinceAggrevated = 0;
         }
 
         private void PatrolBehaviour()
@@ -103,6 +109,7 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer += Time.deltaTime;
             timeSinceArrivedAtWaypoint += Time.deltaTime;
+            timeSinceAggrevated += Time.deltaTime;
         }
 
         private bool AtWaypoint()
@@ -147,9 +154,9 @@ namespace RPG.Control
             combatControl.Attack(player);
         }
 
-        private bool InAttackRangeOfPlayer()
+        private bool IsAggrevated()
         {
-            return Vector3.Distance(transform.position, player.transform.position) <= chaseRange;
+            return Vector3.Distance(transform.position, player.transform.position) <= chaseRange || timeSinceAggrevated < aggroCooldownTime;
         }
 
         //called by Unity

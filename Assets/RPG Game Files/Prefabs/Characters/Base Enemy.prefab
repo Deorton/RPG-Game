@@ -12,6 +12,38 @@ PrefabInstance:
       propertyPath: characterClass
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: -6789466108748732809}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Control.EnemyController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -1389542391670629729, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2012489892498175977, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       propertyPath: m_Acceleration
       value: 20
