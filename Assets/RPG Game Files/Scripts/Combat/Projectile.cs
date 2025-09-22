@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using RPG.Attributes;
 using RPG.Core;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Combat
 {
@@ -17,6 +18,7 @@ namespace RPG.Combat
         [SerializeField] bool isHoming = false;
         [SerializeField] GameObject hitEffect = null;
         [SerializeField] float maxLifeTime = 10f;
+        [SerializeField] UnityEvent onHit;
 
         float damageFromWeapon = 0f;
 
@@ -60,6 +62,9 @@ namespace RPG.Combat
             if (other.GetComponent<Health>() != Target) { return; }
 
             if (Target.IsDead()) { return; }
+
+            speed = 0;
+            onHit.Invoke();
 
             if (hitEffect != null)
             {
