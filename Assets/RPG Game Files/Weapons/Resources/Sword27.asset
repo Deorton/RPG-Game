@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ee01381ca912e4e99f0e7da343ea05, type: 3}
+  m_Name: Sword27
+  m_EditorClassIdentifier: 
+  itemID: 03347f4a-5a69-43c9-a83f-744cc1d6cd52
+  displayName: Sword27
+  description: 
+  icon: {fileID: 21300000, guid: 9c6539f1b2c1c32418dec13ad6e6db3f, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  weaponOverride: {fileID: 22100000, guid: 6af57c223c6d30b4fb5eb0d42c394c84, type: 2}
+  equippedPrefab: {fileID: 4215005951435946510, guid: ea5d090a35440e349a3cbd3ca8d13371, type: 3}
+  attackRange: 2
+  timeBetweenAttacks: 1
+  damage: 10
+  percentageBonus: 0
+  isRightHanded: 1
+  projectile: {fileID: 0}

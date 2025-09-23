@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ee01381ca912e4e99f0e7da343ea05, type: 3}
+  m_Name: Sword26
+  m_EditorClassIdentifier: 
+  itemID: 19a046f9-3b4f-4440-a318-83bff91f3202
+  displayName: Sword26
+  description: 
+  icon: {fileID: 21300000, guid: 70544da3110b0894a969c258dfe604ad, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  weaponOverride: {fileID: 22100000, guid: c03787a748b6d7d4c92ec399b095242c, type: 2}
+  equippedPrefab: {fileID: 6759931982253076304, guid: 0a820fedc9fbcf94987fe4a7ae4aad95, type: 3}
+  attackRange: 2
+  timeBetweenAttacks: 1
+  damage: 10
+  percentageBonus: 0
+  isRightHanded: 1
+  projectile: {fileID: 0}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ee01381ca912e4e99f0e7da343ea05, type: 3}
+  m_Name: Sword24
+  m_EditorClassIdentifier: 
+  itemID: 36f2b2b3-7277-43fb-a344-9049f46539f8
+  displayName: Sword24
+  description: 
+  icon: {fileID: 21300000, guid: d65cd8697319cf240bb9caed361edeb8, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  weaponOverride: {fileID: 22100000, guid: 07f7d72b375fc3e479eee2d5c602dccf, type: 2}
+  equippedPrefab: {fileID: 6505219945326098934, guid: 7ef4b58d2b310124e86e0beeec7e5df0, type: 3}
+  attackRange: 2
+  timeBetweenAttacks: 1
+  damage: 10
+  percentageBonus: 0
+  isRightHanded: 1
+  projectile: {fileID: 0}

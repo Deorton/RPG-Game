@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ee01381ca912e4e99f0e7da343ea05, type: 3}
+  m_Name: Sword23
+  m_EditorClassIdentifier: 
+  itemID: 8d660db6-6f39-47ae-be78-76e880845166
+  displayName: Sword23
+  description: 
+  icon: {fileID: 21300000, guid: c904bed8e2087fa4eb71ddaa7d21f4ec, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  weaponOverride: {fileID: 22100000, guid: d19ce207431805148821bb689826507a, type: 2}
+  equippedPrefab: {fileID: 7540779800678769898, guid: 18789efc292dd9349bd8060eeabcaef4, type: 3}
+  attackRange: 2
+  timeBetweenAttacks: 1
+  damage: 10
+  percentageBonus: 0
+  isRightHanded: 1
+  projectile: {fileID: 0}

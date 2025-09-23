@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ee01381ca912e4e99f0e7da343ea05, type: 3}
+  m_Name: Sword08
+  m_EditorClassIdentifier: 
+  itemID: 093234d7-c378-41c1-9c2f-198980ad5f28
+  displayName: Sword08
+  description: 
+  icon: {fileID: 21300000, guid: 217ec78b231cd3d4b9e6700f7fe32f87, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  weaponOverride: {fileID: 22100000, guid: ac0e827c61ae6744d8ac7e0ad414574f, type: 2}
+  equippedPrefab: {fileID: 3478247065007848094, guid: 02ca8229566607248abc4fc65731eb9b, type: 3}
+  attackRange: 2
+  timeBetweenAttacks: 1
+  damage: 10
+  percentageBonus: 0
+  isRightHanded: 1
+  projectile: {fileID: 0}

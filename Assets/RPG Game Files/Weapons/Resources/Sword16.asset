@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ee01381ca912e4e99f0e7da343ea05, type: 3}
+  m_Name: Sword16
+  m_EditorClassIdentifier: 
+  itemID: 5d047677-262d-4d05-8e42-b5f901c21cb0
+  displayName: Sword16
+  description: 
+  icon: {fileID: 21300000, guid: 84fc084605b990b47b6e8190fdc8ca0a, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
+  stackable: 0
+  allowedEquipLocation: 5
+  weaponOverride: {fileID: 22100000, guid: 40724e7352fdbc3488d3f9e1e09a7545, type: 2}
+  equippedPrefab: {fileID: 2854950799273545534, guid: 10a37017a8cc3bb4f973cf082e3b1b5c, type: 3}
+  attackRange: 2
+  timeBetweenAttacks: 1
+  damage: 10
+  percentageBonus: 0
+  isRightHanded: 1
+  projectile: {fileID: 0}

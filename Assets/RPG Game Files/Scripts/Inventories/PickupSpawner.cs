@@ -57,34 +57,24 @@ namespace RPG.Inventories
             }
         }
 
-        // object ISaveable.CaptureState()
-        // {
-        //     return isCollected();
-        // }
-
-        // void ISaveable.RestoreState(object state)
-        // {
-        //     bool shouldBeCollected = (bool)state;
-
-        //     if (shouldBeCollected && !isCollected())
-        //     {
-        //         DestroyPickup();
-        //     }
-
-        //     if (!shouldBeCollected && isCollected())
-        //     {
-        //         SpawnPickup();
-        //     }
-        // }
-
         public JToken CaptureAsJToken()
         {
-            throw new System.NotImplementedException();
+            return JToken.FromObject(isCollected());
         }
 
         public void RestoreFromJToken(JToken state)
         {
-            throw new System.NotImplementedException();
+            bool shouldBeCollected = state.ToObject<bool>();
+
+            if (shouldBeCollected && !isCollected())
+            {
+                DestroyPickup();
+            }
+
+            if (!shouldBeCollected && isCollected())
+            {
+                SpawnPickup();
+            }
         }
     }
 }
