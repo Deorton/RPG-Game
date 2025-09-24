@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Bow16
   m_EditorClassIdentifier: 
   itemID: 9f7d208d-40f3-468e-bb03-17321cf72f53
-  displayName: 
+  displayName: Bow16
   description: 
-  icon: {fileID: 0}
-  pickup: {fileID: 0}
+  icon: {fileID: 21300000, guid: e98e1bafdd87f6e47a9363325bda4eb0, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
   stackable: 0
   allowedEquipLocation: 5
-  weaponOverride: {fileID: 0}
-  equippedPrefab: {fileID: 0}
-  attackRange: 2
-  timeBetweenAttacks: 1
+  weaponOverride: {fileID: 22100000, guid: c9a2b9d43c884924db76e23c4bf4c1f8, type: 2}
+  equippedPrefab: {fileID: 4133148454644922231, guid: a6468f5f88a04d64a9a87b0260671be1, type: 3}
+  attackRange: 10
+  timeBetweenAttacks: 2
   damage: 10
   percentageBonus: 0
-  isRightHanded: 1
+  isRightHanded: 0
   projectile: {fileID: 0}

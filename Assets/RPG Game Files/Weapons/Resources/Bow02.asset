@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Bow02
   m_EditorClassIdentifier: 
   itemID: 0f71b7fb-d251-44c6-ae07-10a1aa2b6dc0
-  displayName: 
+  displayName: Bow02
   description: 
-  icon: {fileID: 0}
-  pickup: {fileID: 0}
+  icon: {fileID: 21300000, guid: c6595fb0214a33f48bb0cd7c1f2f9757, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
   stackable: 0
   allowedEquipLocation: 5
-  weaponOverride: {fileID: 0}
-  equippedPrefab: {fileID: 0}
-  attackRange: 2
-  timeBetweenAttacks: 1
+  weaponOverride: {fileID: 22100000, guid: 20879906ca8bb3946ade1c68dd892739, type: 2}
+  equippedPrefab: {fileID: 9061965499695644807, guid: 6e5d6ebd1fc315e48b7bf13431296933, type: 3}
+  attackRange: 10
+  timeBetweenAttacks: 2
   damage: 10
   percentageBonus: 0
-  isRightHanded: 1
+  isRightHanded: 0
   projectile: {fileID: 0}
