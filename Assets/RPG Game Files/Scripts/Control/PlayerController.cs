@@ -1,5 +1,6 @@
 using System;
 using RPG.Attributes;
+using RPG.Inventories;
 using RPG.Movement;
 using UnityEngine;
 using UnityEngine.AI;
@@ -40,6 +41,8 @@ namespace RPG.Control
         // Update is called once per frame
         void Update()
         {
+            CheckSpecialAbiltyKeys();
+            
             if (InteractWithUI()) return;
 
             if (health.IsDead())
@@ -52,6 +55,36 @@ namespace RPG.Control
             if (InteractWithMovement()) return;
 
             SetCursor(CursorType.None);
+        }
+
+        private void CheckSpecialAbiltyKeys()
+        {
+            var actionStore = GetComponent<ActionStore>();
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                actionStore.Use(0, gameObject);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                actionStore.Use(1, gameObject);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                actionStore.Use(2, gameObject);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                actionStore.Use(3, gameObject);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                actionStore.Use(4, gameObject);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha6))
+            {
+                actionStore.Use(5, gameObject);
+            }
         }
 
         private bool InteractWithUI()

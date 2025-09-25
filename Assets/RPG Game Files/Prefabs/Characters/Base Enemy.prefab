@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1949954516043615611, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: dropLibrary
+      value: 
+      objectReference: {fileID: 11400000, guid: 75159f5b8e2bd48458f5d3fed35d73a2, type: 2}
     - target: {fileID: 2012489892498175977, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       propertyPath: m_Acceleration
       value: 20

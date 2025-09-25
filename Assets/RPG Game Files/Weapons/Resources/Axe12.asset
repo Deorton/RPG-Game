@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Axe12
   m_EditorClassIdentifier: 
   itemID: 0afe48c1-5b11-4165-9e57-70944caaa7fa
-  displayName: 
+  displayName: Axe12
   description: 
-  icon: {fileID: 0}
-  pickup: {fileID: 0}
+  icon: {fileID: 21300000, guid: e6d3e8ec836839e4b906fff8971962e0, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
   stackable: 0
   allowedEquipLocation: 5
-  weaponOverride: {fileID: 0}
-  equippedPrefab: {fileID: 0}
+  weaponOverride: {fileID: 22100000, guid: 2c7ee9da79779fe4ba1fc5eb2323f616, type: 2}
+  equippedPrefab: {fileID: 4625453946631114535, guid: d46835de8394f6d4099b203b3994cd40, type: 3}
   attackRange: 2
   timeBetweenAttacks: 1
   damage: 10

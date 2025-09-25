@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Axe04
   m_EditorClassIdentifier: 
   itemID: ed8998e1-30b3-4fb8-852c-23fc93e2615f
-  displayName: 
+  displayName: Axe04
   description: 
-  icon: {fileID: 0}
-  pickup: {fileID: 0}
+  icon: {fileID: 21300000, guid: cae6815ab1e4d1f4cba1cfae2ba3e0ee, type: 3}
+  pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
   stackable: 0
   allowedEquipLocation: 5
-  weaponOverride: {fileID: 0}
-  equippedPrefab: {fileID: 0}
+  weaponOverride: {fileID: 22100000, guid: e28c889fb0d2c3641a0cc60fe372363f, type: 2}
+  equippedPrefab: {fileID: 7119137269574112227, guid: 3c57f181524766b45ad0fa2761626d7d, type: 3}
   attackRange: 2
   timeBetweenAttacks: 1
   damage: 10

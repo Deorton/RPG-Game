@@ -9,17 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bf0b527c37a9c942a4395b6e330e489, type: 3}
-  m_Name: Test Healthy Hat
+  m_Script: {fileID: 11500000, guid: f20eb1792e8048a46bf5c7c520a3ea3b, type: 3}
+  m_Name: Boots05
   m_EditorClassIdentifier: 
-  itemID: 8ca6674b-97ca-4c37-9cf4-94879ffab26a
-  displayName: Test Healthy Hat
-  description: test component
-  icon: {fileID: 21300000, guid: 291e5fddf5099584c98f441b1866561f, type: 3}
+  itemID: e6b030ca-20a4-48e6-b046-ed1bec3adf10
+  displayName: Boots05
+  description: 
+  icon: {fileID: 21300000, guid: 0aee1f39ce43c2d4d95455334a10bdf6, type: 3}
   pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
   stackable: 0
-  allowedEquipLocation: 0
-  additiveModifiers:
-  - stat: 0
-    value: 25
-  percentageModifiers: []
+  allowedEquipLocation: 4
