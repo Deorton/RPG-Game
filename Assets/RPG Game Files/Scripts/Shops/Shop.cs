@@ -57,19 +57,25 @@ namespace RPG.Shops
         public void ConfirmTransaction()
         {
             Inventory shopperInventory = currentShopper.GetComponent<Inventory>();
-            if (shopperInventory == null) return;
+            Purse shopperPurse = currentShopper.GetComponent<Purse>();
 
-            var transactionSnapshot = new Dictionary<InventoryItem, int>(transaction);
+            if (shopperInventory == null || shopperPurse == null) return;
 
-            foreach (InventoryItem item in transactionSnapshot.Keys)
+            foreach (ShopItem shopItem in GetAllItems())
             {
-                int quantity = transaction[item];
+                InventoryItem item = shopItem.GetInventoryItem();
+                int quantity = shopItem.GetQuantityInTransaction();
+                float price = shopItem.GetPrice();
+
                 for (int i = 0; i < quantity; i++)
                 {
+                    if (shopperPurse.GetBalance() < price) break;
+
                     bool success = shopperInventory.AddToFirstEmptySlot(item, 1);
                     if (success)
                     {
                         AddToTransaction(item, -1);
+                        shopperPurse.UpdateBalance(-price);
                     }
                 }
             }
@@ -82,7 +88,7 @@ namespace RPG.Shops
             {
                 total += item.GetPrice() * item.GetQuantityInTransaction();
             }
-            
+
             return total;
         }
 
