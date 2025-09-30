@@ -39,5 +39,10 @@ namespace RPG.Shops
         {
             return availability;
         }
+
+        public InventoryItem GetInventoryItem()
+        {
+            return item;
+        }
     }
 }

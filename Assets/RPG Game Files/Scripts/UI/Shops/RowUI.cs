@@ -13,13 +13,29 @@ namespace RPG.UI
         [SerializeField] TextMeshProUGUI itemPrice = null;
         [SerializeField] TextMeshProUGUI quantityField = null;
 
-        public void Setup(ShopItem item)
+        Shop currentShop = null;
+        ShopItem item = null;
+
+        public void Setup(Shop currentShop, ShopItem item)
         {
+            this.currentShop = currentShop;
+            this.item = item;
+
             iconField.sprite = item.GetIcon();
             nameField.text = item.GetName();
             availabilityField.text = $"{item.GetAvailability()}";
             quantityField.text = "0"; // Placeholder until quantity in transaction is implemented
             itemPrice.text = $"${item.GetPrice():N2}";
+        }
+
+        public void Add()
+        {
+            currentShop.AddToTransaction(item.GetInventoryItem(), 1);
+        }
+
+        public void Remove()
+        {
+            currentShop.AddToTransaction(item.GetInventoryItem(), -1);
         }
     }
 }
