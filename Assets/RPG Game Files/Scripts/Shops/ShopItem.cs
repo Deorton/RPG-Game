@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using RPG.Inventories;
@@ -17,6 +18,26 @@ namespace RPG.Shops
             this.availability = availability;
             this.price = price;
             this.quantityInTransaction = quantityInTransaction;
+        }
+
+        public string GetName()
+        {
+            return item.GetDisplayName();
+        }
+
+        public float GetPrice()
+        {
+            return price;
+        }
+
+        public Sprite GetIcon()
+        {
+            return item.GetIcon();
+        }
+
+        public int GetAvailability()
+        {
+            return availability;
         }
     }
 }

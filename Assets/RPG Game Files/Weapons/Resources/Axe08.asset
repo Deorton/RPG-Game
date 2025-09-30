@@ -18,6 +18,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 3cbb496775a04084fb808c04408256b7, type: 3}
   pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
   stackable: 0
+  price: 10
   allowedEquipLocation: 5
   weaponOverride: {fileID: 22100000, guid: c6f636deba4f4ed4eb26814bd071ed75, type: 2}
   equippedPrefab: {fileID: 1855388706975391423, guid: c3eb747f7f305b04fb81550c307dba82, type: 3}
