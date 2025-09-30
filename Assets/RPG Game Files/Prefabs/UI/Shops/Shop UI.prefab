@@ -892,6 +892,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6264684250407346349}
     m_Modifications:
+    - target: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3189210985062376798}
+    - target: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConfirmTransaction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.UI.ShopUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2705029927753600877, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
       propertyPath: m_Name
       value: Confirm Button

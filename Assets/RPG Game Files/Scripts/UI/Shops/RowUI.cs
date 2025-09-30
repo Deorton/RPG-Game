@@ -24,7 +24,7 @@ namespace RPG.UI
             iconField.sprite = item.GetIcon();
             nameField.text = item.GetName();
             availabilityField.text = $"{item.GetAvailability()}";
-            quantityField.text = "0"; // Placeholder until quantity in transaction is implemented
+            quantityField.text = $"{item.GetQuantityInTransaction()}";
             itemPrice.text = $"${item.GetPrice():N2}";
         }
 
