@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ namespace RPG.Inventories
         [SerializeField] float startingBalance = 500f;
 
         float balance = 0;
+
+        public event Action onChange;
 
         void Awake()
         {
@@ -23,7 +26,11 @@ namespace RPG.Inventories
         public void UpdateBalance(float amount)
         {
             balance += amount;
-            print($"Balance : {balance}");
+
+            if (onChange != null)
+            {
+                onChange();
+            }
         }
     }
 }
