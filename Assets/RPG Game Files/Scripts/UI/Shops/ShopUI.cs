@@ -1,5 +1,6 @@
 using RPG.Shops;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,6 +44,11 @@ namespace RPG.UI
             currentShop = shopper.GetActiveShop();
             gameObject.SetActive(currentShop != null);
 
+            foreach(FilterButtonUI button in GetComponentsInChildren<FilterButtonUI>())
+            {
+                button.SetSHop(currentShop);
+            }
+
             if (currentShop == null) return;
             shopName.text = currentShop.GetShopName();
 
@@ -79,6 +85,11 @@ namespace RPG.UI
             {
                 switchText.text = "Switch to Buying";
                 confirmText.text = "Sell";
+            }
+
+            foreach(FilterButtonUI button in GetComponentsInChildren<FilterButtonUI>())
+            {
+                button.RefreshUI();
             }
         }
 
