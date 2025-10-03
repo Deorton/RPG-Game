@@ -68,14 +68,17 @@ namespace RPG.UI
             totalField.color = currentShop.HasSufficientFunds() ? originalTotalColor : Color.red;
             confirmButton.interactable = currentShop.CanTransact();
 
+            TextMeshProUGUI confirmText = confirmButton.GetComponentInChildren<TextMeshProUGUI>();
             TextMeshProUGUI switchText = switchModeButton.GetComponentInChildren<TextMeshProUGUI>();
             if (currentShop.IsBuyingMode())
             {
                 switchText.text = "Switch to Selling";
+                confirmText.text = "Buy";
             }
             else
             {
                 switchText.text = "Switch to Buying";
+                confirmText.text = "Sell";
             }
         }
 
