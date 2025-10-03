@@ -63,7 +63,21 @@ namespace RPG.Shops
         public ItemCategory GetFilter() { return ItemCategory.None; }
         public void SelectMode(bool isBuying) { }
         public bool IsBuyingMode() { return true; }
-        public bool CanTransact() { return true; }
+
+        public bool CanTransact()
+        {
+            if (transactionEmpty()) return false;
+            if (!HasSufficientFunds()) return false;
+            return true;
+        }
+
+        public bool HasSufficientFunds()
+        {
+            Purse shopperPurse = currentShopper.GetComponent<Purse>();
+            if (shopperPurse == null) return false;
+
+            return shopperPurse.GetBalance() >= TransactionTotal();
+        }
 
         public void ConfirmTransaction()
         {
@@ -126,9 +140,9 @@ namespace RPG.Shops
             }
 
             if (transaction[item] <= 0)
-                {
-                    transaction.Remove(item);
-                }
+            {
+                transaction.Remove(item);
+            }
 
             if (onChange != null)
             {
@@ -153,6 +167,11 @@ namespace RPG.Shops
         public string GetShopName()
         {
             return shopName;
+        }
+
+        private bool transactionEmpty()
+        {
+            return transaction.Count == 0;
         }
     }
 }
