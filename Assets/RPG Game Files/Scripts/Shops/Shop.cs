@@ -27,6 +27,8 @@ namespace RPG.Shops
 
         Shopper currentShopper = null;
 
+        bool isBuyingMode = true;
+
         public event Action onChange;
 
         void Awake()
@@ -61,8 +63,21 @@ namespace RPG.Shops
 
         public void SelectFilter(ItemCategory category) { }
         public ItemCategory GetFilter() { return ItemCategory.None; }
-        public void SelectMode(bool isBuying) { }
-        public bool IsBuyingMode() { return true; }
+
+        public void SelectMode(bool isBuying)
+        {
+            isBuyingMode = isBuying;
+            
+            if (onChange != null)
+            {
+                onChange();
+            }
+        }
+
+        public bool IsBuyingMode()
+        {
+            return isBuyingMode;
+        }
 
         public bool CanTransact()
         {

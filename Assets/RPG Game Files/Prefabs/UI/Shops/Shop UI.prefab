@@ -658,6 +658,7 @@ MonoBehaviour:
   rowPrefab: {fileID: -65472392260639823, guid: d18be8dae822c1b4e9a826b6e98896ef, type: 3}
   totalField: {fileID: 7637864422142059342}
   confirmButton: {fileID: 4381905471357677457}
+  switchModeButton: {fileID: 8641946777878304201}
 --- !u!224 &6264684250407346349 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5320739858748479303, guid: 4cae6060f52a1f54b8d2cc8f2d6d9075, type: 3}
@@ -1966,6 +1967,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3986373309894948833, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
   m_PrefabInstance: {fileID: 7806633711246799875}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8641946777878304201 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1997600634344366538, guid: 90f8bf7efa8d63a4ea13c52a90b23576, type: 3}
+  m_PrefabInstance: {fileID: 7806633711246799875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9073859177746060900
 PrefabInstance:
   m_ObjectHideFlags: 0
