@@ -1,11 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using RPG.Saving;
 using UnityEngine;
 
 namespace RPG.Inventories
 {
-    public class Purse : MonoBehaviour
+    public class Purse : MonoBehaviour, IJsonSaveable
     {
         [SerializeField] float startingBalance = 500f;
 
@@ -32,5 +32,16 @@ namespace RPG.Inventories
                 onChange();
             }
         }
+
+        public JToken CaptureAsJToken()
+        {
+            return JToken.FromObject(balance);
+        }
+
+        public void RestoreFromJToken(JToken state)
+        {
+            balance = state.ToObject<float>();
+        }
+
     }
 }
