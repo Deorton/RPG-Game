@@ -15,9 +15,10 @@ MonoBehaviour:
   itemID: 126dd42b-1790-4eb4-8ce1-536db7b66924
   displayName: Mega Splash
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 7d2b33fc5dba04446afe5cf4673a94bb, type: 3}
   pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
   stackable: 0
   price: 75
   category: 5
   consumable: 0
+  targetingStrategy: {fileID: 11400000, guid: ced6db1289707c94092c4f97532160e3, type: 2}
