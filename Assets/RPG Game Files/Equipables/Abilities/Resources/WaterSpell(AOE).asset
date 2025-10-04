@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8358f0fcfcb22418d7b5d788e02cc4, type: 3}
-  m_Name: Small Health Potion
+  m_Script: {fileID: 11500000, guid: 6058e8746f7c80f47897f2d20d0cc56c, type: 3}
+  m_Name: WaterSpell(AOE)
   m_EditorClassIdentifier: 
-  itemID: 15181f38-0bfc-4c11-9d8d-2bbd6638ab74
-  displayName: Small Health Potion
-  description: Restores 20 health points
-  icon: {fileID: 21300000, guid: 2776198d1c5884f4bbe706921dff7445, type: 3}
+  itemID: 126dd42b-1790-4eb4-8ce1-536db7b66924
+  displayName: Mega Splash
+  description: 
+  icon: {fileID: 0}
   pickup: {fileID: 6807166779048956903, guid: 4405d1f82ba179049bb4c9fcc27834e9, type: 3}
-  stackable: 1
-  price: 50
-  category: 3
-  consumable: 1
+  stackable: 0
+  price: 75
+  category: 5
+  consumable: 0

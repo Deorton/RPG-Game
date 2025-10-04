@@ -85,6 +85,23 @@ namespace RPG.Control
             {
                 actionStore.Use(5, gameObject);
             }
+            if (Input.GetKeyDown(KeyCode.Alpha7))
+            {
+                actionStore.Use(6, gameObject);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                actionStore.Use(7, gameObject);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                actionStore.Use(8, gameObject);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                actionStore.Use(9, gameObject);
+            }
         }
 
         private bool InteractWithUI()
