@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Base Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2220383506151624583, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2621421978453265390, guid: 3b0df4d917c68734c9ec661e09afcc59, type: 3}
       propertyPath: weapon
       value: 
