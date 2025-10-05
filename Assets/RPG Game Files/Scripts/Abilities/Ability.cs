@@ -12,7 +12,17 @@ namespace RPG.Abilities
 
         public override void Use(GameObject user)
         {
-            targetingStrategy.StartTargetting(user);
+            targetingStrategy.StartTargetting(user, TargetAquired);
+        }
+
+        private void TargetAquired(IEnumerable<GameObject> targets)
+        {
+            Debug.Log("Target Aquired");
+
+            foreach (var target in targets)
+            {
+                Debug.Log(target);
+            }
         }
     }
 }

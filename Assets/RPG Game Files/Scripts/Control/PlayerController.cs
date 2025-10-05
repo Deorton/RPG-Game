@@ -195,7 +195,7 @@ namespace RPG.Control
             return true;
         }
 
-        private static Ray GetMouseRay()
+        public static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
         }

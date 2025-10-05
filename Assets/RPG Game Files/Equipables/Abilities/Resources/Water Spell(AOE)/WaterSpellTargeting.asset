@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d827951cefdb44c9da2d1312a20084, type: 3}
   m_Name: WaterSpellTargeting
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 0}
+  cursorTexture: {fileID: 2800000, guid: 25bd0de0b19769648885c27bebd3c5e1, type: 3}
   cursorHotspot: {x: 0, y: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  areaAffectRadius: 5
+  targetingPrefab: {fileID: 6517345771026768378, guid: ddc719dbdfdae9b458625948f472b160, type: 3}
